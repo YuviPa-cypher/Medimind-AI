@@ -4,7 +4,7 @@
   "outputDirectory": "frontend/dist",
   "rewrites": [
     {
-      "source": "/(health|auth|auth/.*|predict|history|patients|dashboard|admin|admin/.*|chat)",
+      "source": "/(health|auth.*|predict|history|patients|dashboard|admin.*|chat|api.*)",
       "destination": "/api/index.py"
     },
     {

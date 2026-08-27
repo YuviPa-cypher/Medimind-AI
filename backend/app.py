@@ -34,18 +34,34 @@ def domain_of(email): return email.rsplit('@',1)[-1].lower()
 
 @asynccontextmanager
 async def lifespan(app):
-    await connect_mongodb(); predictor.load_model()
-    existing=await db.user_by_email(settings.default_doctor_email)
-    if not existing and db.db is not None:
-        uid=await db.create_user({'email':settings.default_doctor_email,'name':settings.default_doctor_name,'role':'Admin','hashed_password':hash_password(settings.default_doctor_password)})
-        await db.add_domain(domain_of(settings.default_doctor_email),uid)
-    elif existing and db.db is not None:
-        updates={}
-        if 'name' not in existing: updates['name']=settings.default_doctor_name
-        if 'hashed_password' not in existing: updates['hashed_password']=hash_password(settings.default_doctor_password)
-        if updates: await db.db.users.update_one({'_id':existing['_id']},{'$set':updates})
-        await db.add_domain(domain_of(settings.default_doctor_email),str(existing['_id']))
-    yield; await close_mongodb()
+    try:
+        await connect_mongodb()
+    except Exception as e:
+        pass
+    try:
+        predictor.load_model()
+    except Exception as e:
+        pass
+    if db.db is not None:
+        try:
+            existing = await db.user_by_email(settings.default_doctor_email)
+            if not existing:
+                uid = await db.create_user({'email': settings.default_doctor_email, 'name': settings.default_doctor_name, 'role': 'Admin', 'hashed_password': hash_password(settings.default_doctor_password)})
+                await db.add_domain(domain_of(settings.default_doctor_email), uid)
+            else:
+                updates = {}
+                if 'name' not in existing: updates['name'] = settings.default_doctor_name
+                if 'hashed_password' not in existing: updates['hashed_password'] = hash_password(settings.default_doctor_password)
+                if updates: await db.db.users.update_one({'_id': existing['_id']}, {'$set': updates})
+                await db.add_domain(domain_of(settings.default_doctor_email), str(existing['_id']))
+        except Exception as e:
+            pass
+    yield
+    try:
+        await close_mongodb()
+    except Exception:
+        pass
+
 app=FastAPI(title=settings.app_name,lifespan=lifespan)
 app.add_middleware(CORSMiddleware,allow_origins=settings.cors_origins,allow_credentials=True,allow_methods=['*'],allow_headers=['*'])
 
