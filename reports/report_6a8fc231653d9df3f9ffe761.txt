@@ -1,0 +1,19 @@
+MEDIMIND REPORT
+Patient: Bob Williams
+Prediction: Positive
+Risk: High
+**MEDIMIND AI Clinical Assessment**
+
+**Clinical Explanation:**
+The patient demonstrates a high risk for Type 2 Diabetes Mellitus, driven by significant hyperglycemia (Glucose 160.0 mg/dL) and Class I obesity (BMI 32.0 kg/m²) in a 55-year-old individual. These combined metrics strongly indicate underlying insulin resistance and impaired metabolic regulation requiring immediate clinical evaluation.
+
+**Recommended Follow-Up Tests:**
+*   **Hemoglobin A1c (HbA1c):** To assess glycemic control over the past 2–3 months.
+*   **Fasting Plasma Glucose (FPG) / Oral Glucose Tolerance Test (OGTT):** For definitive diagnostic confirmation.
+*   **Fasting Lipid Panel:** To evaluate cardiovascular risk profile.
+*   **Renal Function Panel & Spot Urine Albumin-to-Creatinine Ratio (uACR):** To screen for early microvascular complications.
+
+**Lifestyle Recommendations:**
+*   **Nutritional Therapy:** Adopt a low-glycemic, calorie-restricted dietary pattern (such as the Mediterranean diet) emphasizing whole grains, lean proteins, and high-fiber foods while eliminating refined sugars.
+*   **Physical Activity:** Engage in at least 150 minutes of moderate-intensity aerobic exercise (e.g., brisk walking) per week, supplemented by twice-weekly resistance training.
+*   **Weight Management:** Target an initial weight loss of 5–10% to significantly improve insulin sensitivity and glycemic control.

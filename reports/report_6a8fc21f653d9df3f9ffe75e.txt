@@ -1,0 +1,18 @@
+MEDIMIND REPORT
+Patient: Alice Green
+Prediction: Positive
+Risk: High
+**MEDIMIND AI Clinical Assessment**
+
+### Clinical Explanation
+The patient demonstrates elevated blood glucose levels (156.0 mg/dL) paired with a BMI of 31.4 kg/m² (Class I obesity), which significantly increases the likelihood of impaired glucose tolerance or early-stage Type 2 Diabetes Mellitus. While blood pressure remains within acceptable parameters, the combination of hyperglycemia and obesity strongly aligns with the 80.0% high-risk prediction for metabolic risk.
+
+### Recommended Follow-up Tests
+* **HbA1c Test:** To assess average blood sugar levels over the past 2–3 months.
+* **Fasting Plasma Glucose (FPG) or OGTT:** To confirm fasting status and evaluate glucose clearance.
+* **Fasting Lipid Panel:** To screen for co-occurring dyslipidemia common in metabolic conditions.
+
+### Lifestyle Recommendations
+* **Dietary Modifications:** Adopt a low-glycemic, Mediterranean-style diet emphasizing non-starchy vegetables, lean proteins, and complex carbohydrates while eliminating sugar-sweetened beverages.
+* **Physical Activity:** Engage in at least 150 minutes of moderate-intensity aerobic exercise (e.g., brisk walking, swimming) per week, supplemented by strength training.
+* **Weight Management:** Target a gradual 5–10% reduction in body weight to improve insulin sensitivity and glycemic control.
