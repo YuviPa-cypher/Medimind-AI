@@ -146,18 +146,7 @@ cd Medimind-AI
 
 This repository is pre-configured for **1-click single-repository Vercel deployment** (`vercel.json` + `api/index.py`).
 
-### Deployment Steps:
-1. Go to [Vercel Dashboard](https://vercel.com/new) and click **"Add New Project"**.
-2. Select and import the **`YuviPa-cypher/Medimind-AI`** GitHub repository.
-3. Leave **Framework Preset** as **"Other"** or **"Vite"** (Vercel auto-detects `vercel.json`).
-4. In **Environment Variables**, add:
-   - `MONGODB_URI`: Your MongoDB Atlas connection string (`mongodb+srv://...`)
-   - `MONGODB_DB`: `medimind`
-   - `GEMINI_API_KEY`: Your Google Gemini API Key
-   - `SECRET_KEY`: Long random string for JWT signatures
-5. Click **"Deploy"**.
 
----
 
 ## 🔑 Demo Login Credentials (Seeded on First Run)
 
