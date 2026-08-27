@@ -36,8 +36,14 @@ class Settings(BaseSettings):
     def resolved_reports_dir(self):
         path = Path(self.reports_dir)
         path = path if path.is_absolute() else ROOT_DIR / path
-        path.mkdir(parents=True, exist_ok=True)
-        return path
+        try:
+            path.mkdir(parents=True, exist_ok=True)
+            return path
+        except Exception:
+            tmp_path = Path("/tmp") / self.reports_dir
+            tmp_path.mkdir(parents=True, exist_ok=True)
+            return tmp_path
+
 
     @property
     def cors_origins(self):
