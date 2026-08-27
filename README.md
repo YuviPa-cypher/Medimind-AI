@@ -142,10 +142,6 @@ cd Medimind-AI
 
 ---
 
-## ⚡ Deploying to Vercel
-
-This repository is pre-configured for **1-click single-repository Vercel deployment** (`vercel.json` + `api/index.py`).
-
 
 
 ## 🔑 Demo Login Credentials (Seeded on First Run)
